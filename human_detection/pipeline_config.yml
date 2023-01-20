@@ -1,0 +1,9 @@
+nodes:
+- input.visual:
+    source: data/hawker05.png
+- model.yolo:
+    detect: ["person", "cup", "dining table", "chair", "fork", "knife", "spoon", "bowl", "banana", "wine glass", "bird"]
+- draw.bbox:
+    show_labels: True
+- output.media_writer:
+    output_dir: output
