@@ -9,12 +9,15 @@ API sample output
         "labelled_frame": [..img..],
         "total_people_count": 10,
         "zone_people_count": [2, 2, 0, 0],
-        "mapping": [1, 3, 2, 5]
+        "zone_mapping": [1, 3, 2, 5]
     },
     "CAMERA_B": {
         ...
     }
 }
+
+zone_mapping indicates the id of the object (e.g. a table, a stall) that the zone is supposed to track.
+What these ids represent should be made clear through a labelled floor plan. 
 """
 
 

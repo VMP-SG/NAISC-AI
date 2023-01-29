@@ -28,7 +28,6 @@ def count_human_gen(path_to_file, zone_split, resolution, mapping):
     media_writer_node = media_writer.Node(output_dir=str(Path.cwd() / "output"))
 
     # Manually run the pipeline
-
     while True:
         visual_output = visual_node.run({})
         if visual_output["pipeline_end"]: break  # Video has no more frames
@@ -57,7 +56,7 @@ def count_human_gen(path_to_file, zone_split, resolution, mapping):
                "labelled_frame": legend_output["img"],
                "total_people_count": bbox_count_output["count"],
                "zone_people_count": zone_count_output["zone_count"],
-               "mapping": mapping}
+               "zone_mapping": mapping}
 
 
 # Code for testing
